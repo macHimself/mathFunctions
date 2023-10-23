@@ -1,10 +1,13 @@
 # mathFunctions
-just small math functions I try time to time, and some algorithms to explore
+Small mathematical functions, algorithms to test ideas and efficiency of some. 
 
-Time Effectivity check 
-| Function | Realisation |amount| time (sec)|
-|----------|:-----------:|-----:|----------:|
-|PrimeNumber search| all divisors check | 30.000| 938.9955297079999|
-|PrimeNumber search| half of divisors check | 30.000| 504.600202125|
-|PrimeNumber search| square root check for divisors| 30.000 | 12.833887625|
-|PrimeNumber search| square root check for divisors | 300.000 | 274.450768542|
+## Search for prime numbers
+This function looks for prime numbers. Where every potential prime number N is checked for divisors in range 2 to N-1 in general, and in last and commited version is used the limitation by square root of N.
+
+### Time Effectivity check 
+| Function | change      | Realisation | search in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+|printPrimeNumbers + isPrimeNumber | test < num | all divisors check | 0 - 30.000| 938.9955297079999|
+|printPrimeNumbers + isPrimeNumber | test < num / 2 | half of divisors check | 0 - 30.000| 504.600202125|
+|printPrimeNumbers + isPrimeNumber | test < Int(sqrt(Double(num))) | square root check for divisors| 0 - 30.000 | 12.833887625|
+|printPrimeNumbers + isPrimeNumber | test < Int(sqrt(Double(num))) | square root check for divisors | 0 - 300.000 | 274.450768542|
