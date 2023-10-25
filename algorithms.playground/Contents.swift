@@ -2,7 +2,7 @@ import Foundation
 
 let clock = ContinuousClock()
 var array: [Int] = []
-for _ in 0...10{
+for _ in 0...10000{
     array.append(Int.random(in: 1..<1000))
 }
 
@@ -40,9 +40,9 @@ func insertionSort() {
         }
         answer[j+1] = x
     }
-//    print(answer)
+    print(answer)
 }
     
-//let result = clock.measure(insertionSort)
+let result = clock.measure(insertionSort)
 //print(result)
 //print("done")

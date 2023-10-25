@@ -27,7 +27,7 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare on left and move | | easy | 100 | 0.642950208 |
 | compare on left and move | | easy | 500 | 33.781183 |
 | compare on left and move | | easy | 1000 | 597.091251791 |
-| compare on left and move | | easy | 10000 | too Long |
+| compare on left and move | | easy | 10000 | 1532.485308041 |
 
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|
