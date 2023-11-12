@@ -29,6 +29,16 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare on left and move | | easy | 1000 | 597.091251791 |
 | compare on left and move | | easy | 10000 | 1532.485308041 |
 
+## Bubble Sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| compare and exchange | | easy | 10 | 0.01712775 |
+| compare and exchange | | easy | 100 | 0.161592375 |
+| compare on left and move | | easy | 500 | 3.798230167 |
+| compare on left and move | | easy | 1000 | 14.844790167000001 |
+| compare on left and move | | easy | 10000 | 1630.451792458 |
+
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|
 |----------|------------:|------------:|----------------:|----------:|
