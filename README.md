@@ -49,6 +49,16 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare and exchange | | easy | 1000 |  |
 | compare and exchange | | easy | 10000 |  |
 
+## Selection Sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| compare and exchange | | easy | 10 | 0.00209275 |
+| compare and exchange | | easy | 100 | 0.018028792 |
+| compare and exchange  | | easy | 500 | 0.142954167 |
+| compare and exchange | | easy | 1000 | 0.281173375 |
+| compare and exchange | | easy | 10000 | 15.19937975 |
+
 
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|
@@ -56,3 +66,7 @@ This function looks for prime numbers. Where every potential prime number N is c
 | insertion sort | | easy | 1000 | 597.091251791 |
 | bubble sort | | easy | 1000 | 14.844790167000001 |
 | shake sort| | easy | 1000 | | 
+| selection sort | | easy | 1000 | 0.281173375 |
+
+---
+note: the time effectivity is counted in swift like playground.
