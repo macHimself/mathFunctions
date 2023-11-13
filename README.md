@@ -35,12 +35,24 @@ This function looks for prime numbers. Where every potential prime number N is c
 |----------|------------:|------------:|----------------:|----------:|
 | compare and exchange | | easy | 10 | 0.01712775 |
 | compare and exchange | | easy | 100 | 0.161592375 |
-| compare on left and move | | easy | 500 | 3.798230167 |
-| compare on left and move | | easy | 1000 | 14.844790167000001 |
-| compare on left and move | | easy | 10000 | 1630.451792458 |
+| compare and exchange | | easy | 500 | 3.798230167 |
+| compare and exchange | | easy | 1000 | 14.844790167000001 |
+| compare and exchange  | | easy | 10000 | 1630.451792458 |
+
+## Shake Sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| compare and exchange | | easy | 10 |  |
+| compare and exchange | | easy | 100 |  |
+| compare and exchange  | | easy | 500 |  |
+| compare and exchange | | easy | 1000 |  |
+| compare and exchange | | easy | 10000 |  |
+
 
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|
 |----------|------------:|------------:|----------------:|----------:|
 | insertion sort | | easy | 1000 | 597.091251791 |
-
+| bubble sort | | easy | 1000 | 14.844790167000001 |
+| shake sort| | easy | 1000 | | 
