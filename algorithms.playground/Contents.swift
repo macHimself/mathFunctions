@@ -136,6 +136,14 @@ func quickSort() {
     var answer = array
     print(answer)
     
+    func partition() {
+        repeat {
+            
+        } while 
+    }
+    
+    
+    
     
     print(answer)
 }
