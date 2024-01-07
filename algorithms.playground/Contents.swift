@@ -131,7 +131,7 @@ func selectionSort () {
 //let result = clock.measure(selectionSort)
 //print(result, array.count)
 //print("done")
-
+/*
 func quickSort() {
     var answer = array
     print(answer)
@@ -147,7 +147,52 @@ func quickSort() {
     
     print(answer)
 }
+*/
 
-let result = clock.measure(selectionSort)
-print(result, array.count)
+func excha(_ a: Int, _ b: Int) -> (Int,Int){return (b, a)}
+
+func orderStatistics(_ array: [Int], _ l: Int, _ r: Int, _ k: Int) -> Int{
+    var A = array
+    var x = A[(l+r)/2]
+    var i = l
+    var j = r
+    repeat {
+        while A[i] < x {
+            i += 1
+        }
+        while x < A[j] {
+            j -= 1
+        }
+        if i > j {
+            break
+        }
+        let a = excha(A[i], A[j])
+        A[i] = a.0
+        A[j] = a.1
+        i += 1
+        j -= 1
+    } while i <= j
+    if k-1 <= j{
+        if l < j {
+            return orderStatistics(A, l, j, k)
+        }
+        return A[j]
+    }
+    if i <= k-1 {
+        if i<r {
+            return orderStatistics(A,i, r, k)
+        }
+        return A[i]
+    }
+    return A[k-1]
+    
+}
+
+
+ 
+//let result = clock.measure()
+
+
+let result = orderStatistics(array,0,array.count-1,3)
+print(array,"\n",result,"\n", array.count)
 print("done")
