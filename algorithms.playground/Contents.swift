@@ -131,23 +131,6 @@ func selectionSort () {
 //let result = clock.measure(selectionSort)
 //print(result, array.count)
 //print("done")
-/*
-func quickSort() {
-    var answer = array
-    print(answer)
-    
-    func partition() {
-        repeat {
-            
-        } while 
-    }
-    
-    
-    
-    
-    print(answer)
-}
-*/
 
 func excha(_ a: Int, _ b: Int) -> (Int,Int){return (b, a)}
 
@@ -188,11 +171,28 @@ func orderStatistics(_ array: [Int], _ l: Int, _ r: Int, _ k: Int) -> Int{
     
 }
 
+//let result = orderStatistics(array,0,array.count-1,3)
 
- 
 //let result = clock.measure()
+//print(array,"\n",result,"\n", array.count)
+//print("done")
 
 
-let result = orderStatistics(array,0,array.count-1,3)
-print(array,"\n",result,"\n", array.count)
-print("done")
+func quickSort() {
+    var answer = array
+    print(answer)
+    
+    func partition() {
+        repeat {
+            
+        } while
+    }
+    
+    
+    
+    
+    print(answer)
+}
+//let result = clock.measure(quickSort)
+//print(array,"\n",result,"\n", array.count)
+//print("done")
