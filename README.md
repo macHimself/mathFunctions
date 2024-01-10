@@ -84,3 +84,5 @@ This function looks for prime numbers. Where every potential prime number N is c
 | shell sort | | medium | 1000 | 0.779618459 |
 ---
 note: the time effectivity is counted in swift like playground.
+- if is not said different: 
+- - hardware: macBookPro 2023 Apple M2 Pro 32GB ram   
