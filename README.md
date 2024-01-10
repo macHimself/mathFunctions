@@ -65,13 +65,23 @@ This function looks for prime numbers. Where every potential prime number N is c
 ### Time Effectivity check
 | Function | change      | Realisation | sorting in range | time (sec)|
 |----------|------------:|------------:|----------------:|----------:|
-| compare every n. position | | easy | 10 | 0.012747625 |
-| compare every n. position | | easy | 50 | 0.018819 |
-| compare every n. position | | easy | 100 | 0.048813416 |
-| compare every n. position | | easy | 500 | 0.361823417 |
-| compare every n. position | | easy | 1000 | 0.779618459 |
-| compare every n. position | | easy | 10000 | 12.028018375 |
+| compare every n. position | | medium | 10 | 0.012747625 |
+| compare every n. position | | medium | 50 | 0.018819 |
+| compare every n. position | | medium | 100 | 0.048813416 |
+| compare every n. position | | medium | 500 | 0.361823417 |
+| compare every n. position | | medium | 1000 | 0.779618459 |
+| compare every n. position | | medium | 10000 | 12.028018375 |
 
+## Heap sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| build Heap & repeated maxHeapify | | easy | 10 | 0.026930583 |
+| compare every n. position | | medium | 50 | 0.07636775 |
+| compare every n. position | | medium | 100 | 0.178366292 |
+| compare every n. position | | medium | 500 | 1.201746834 |
+| compare every n. position | | medium | 1000 | 2.680482917 |
+| compare every n. position | | medium | 10000 | 35.958297916 |
 
 
 #### Time compared in different sorting algorithms
@@ -82,6 +92,7 @@ This function looks for prime numbers. Where every potential prime number N is c
 | shake sort| | easy | 1000 | 0.128450167 | 
 | selection sort | | easy | 1000 | 0.281173375 |
 | shell sort | | medium | 1000 | 0.779618459 |
+| heap sort | | medium | 1000 | 2.680482917 |
 ---
 note: the time effectivity is counted in swift like playground.
 - if is not said different: 

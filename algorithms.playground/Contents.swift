@@ -3,7 +3,7 @@ import Foundation
 let clock = ContinuousClock()
 var array: [Int] = []
 for _ in 0...10000{//10000{
-    array.append(Int.random(in: 1..<1000))
+    array.append(Int.random(in: 1..<100))
 }
 
 func lichSud() {
@@ -108,9 +108,9 @@ func shakeSort () {
     print(answer)
 }
 
-let result = clock.measure(shakeSort)
-print(result, array.count)
-print("done")
+//let result = clock.measure(shakeSort)
+//print(result, array.count)
+//print("done")
 
 func selectionSort () {
     var answer = array
@@ -179,21 +179,46 @@ func orderStatistics(_ array: [Int], _ l: Int, _ r: Int, _ k: Int) -> Int{
 
 /*
 func quickSort() {
-    var answer = array
-    print(answer)
     
-    func partition() {
+    func partition(_ l: Int, _ r: Int) -> Int {
+        var x = array[r]
+        var i = l
+        var j = r
         repeat {
-            
-        } while
+            while array[i] < x {
+                i += 1
+            }
+            while x < array[j] {
+                j -= 1
+                if i >= j {
+                    break
+                }
+            }
+            if i >= j {
+                break
+            }
+            let a = exch(array[i], array[j])
+            array[i] = a.0
+            array[j] = a.1
+        } while true
+        let a  = exch(array[i], array[r])
+        array[i] = a.0
+        array[r] = a.1
+        return i
     }
     
+    func quickSortIntern(_ l: Int, _ r: Int) {
+        if l < r {
+            let i = partition(l, r)
+            quickSortIntern(l, i-1)
+            quickSortIntern(i+1, r)
+        }
+    }
     
+    print(quickSortIntern(0,array.count-1))
     
-    
-    print(answer)
 }
- */
+*/
 
 //let result = clock.measure(quickSort)
 //print(array,"\n",result,"\n", array.count)
@@ -230,3 +255,71 @@ func shellSort() {
 //let result = clock.measure(shellSort)
 //print(array,"\n",result,"\n", array.count)
 //print("done")
+
+/*
+func middleQuickSort(){
+    
+}
+*/
+
+//let result = clock.measure(quickSort)
+//print(array,"\n",result,"\n", array.count)
+//print("done")
+print(array)
+func heapSort() {
+    
+    buildHeap(array.count-1)
+    var k = array.count - 1
+    while k > 0 {
+        let a = exch(array[0], array[k])
+        array[0] = a.0
+        array[k] = a.1
+        k -= 1
+        maxHeap(0, k)
+    }
+    
+    func buildHeap(_ k: Int) {
+        
+        for i in stride(from: k/2, to: -1, by: -1) {
+          //  print(array, i)
+            maxHeap(i, k)
+        }
+        
+    }
+    
+    func maxHeap(_ parent: Int, _ konecStromu: Int) {
+        var l = leftChild(parent)
+        var r = rightChild(parent)
+        var highest = 0
+        if l <= konecStromu && array[l] > array[parent] {
+            highest = l
+        } else {
+            highest = parent
+        }
+        
+        if r <= konecStromu && array[r] > array[highest] {
+            highest = r
+        }
+        if highest != parent {
+            let a = exch(array[parent], array[highest])
+            array[parent] = a.0
+            array[highest] = a.1
+       //     print(array)
+            maxHeap(highest, konecStromu)
+        }
+    }
+    
+    func leftChild(_ index: Int) -> Int {
+        return (index*2) + 1
+    }
+    
+    func rightChild(_ index: Int) -> Int {
+        return (index*2) + 2
+    }
+    
+}
+
+let result = clock.measure(heapSort)
+print(array,"\n",result,"\n", array.count)
+print("done")
+
