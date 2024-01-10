@@ -43,11 +43,12 @@ This function looks for prime numbers. Where every potential prime number N is c
 ### Time Effectivity check
 | Function | change      | Realisation | sorting in range | time (sec)|
 |----------|------------:|------------:|----------------:|----------:|
-| compare and exchange | | easy | 10 |  |
-| compare and exchange | | easy | 100 |  |
+| compare and exchange | | easy | 10 | 0.006992458 |
+| compare and exchange | | easy | 50 |  |
+| compare and exchange | | easy | 100 | 0.011912959 |
 | compare and exchange  | | easy | 500 |  |
-| compare and exchange | | easy | 1000 |  |
-| compare and exchange | | easy | 10000 |  |
+| compare and exchange | | easy | 1000 | 0.128450167 |
+| compare and exchange | | easy | 10000 | 0.4379705 |
 
 ## Selection Sort
 ### Time Effectivity check
@@ -60,13 +61,26 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare and exchange | | easy | 10000 | 15.19937975 |
 
 
+## Shell sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| compare every n. position | | easy | 10 | 0.012747625 |
+| compare every n. position | | easy | 50 | 0.018819 |
+| compare every n. position | | easy | 100 | 0.048813416 |
+| compare every n. position | | easy | 500 | 0.361823417 |
+| compare every n. position | | easy | 1000 | 0.779618459 |
+| compare every n. position | | easy | 10000 | 12.028018375 |
+
+
+
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|
 |----------|------------:|------------:|----------------:|----------:|
 | insertion sort | | easy | 1000 | 597.091251791 |
 | bubble sort | | easy | 1000 | 14.844790167000001 |
-| shake sort| | easy | 1000 | | 
+| shake sort| | easy | 1000 | 0.128450167 | 
 | selection sort | | easy | 1000 | 0.281173375 |
-
+| shell sort | | medium | 1000 | 0.779618459 |
 ---
 note: the time effectivity is counted in swift like playground.
