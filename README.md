@@ -83,6 +83,17 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare every n. position | | medium | 1000 | 2.680482917 |
 | compare every n. position | | medium | 10000 | 35.958297916 |
 
+## Merge sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| build Heap & repeated maxHeapify | | easy | 10 | 0.021923125 |
+| compare every n. position | | medium | 50 | 0.064003583 |
+| compare every n. position | | medium | 100 | 0.202250333 |
+| compare every n. position | | medium | 500 | 2.28939825 |
+| compare every n. position | | medium | 1000 | 6.08427125 |
+| compare every n. position | | medium | 10000 | 134.057715833 |
+
 
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|
@@ -93,6 +104,7 @@ This function looks for prime numbers. Where every potential prime number N is c
 | selection sort | | easy | 1000 | 0.281173375 |
 | shell sort | | medium | 1000 | 0.779618459 |
 | heap sort | | medium | 1000 | 2.680482917 |
+| merge sort | | medium | 1000 | 6.08427125 |
 ---
 note: the time effectivity is counted in swift like playground.
 - if is not said different: 
