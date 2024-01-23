@@ -61,16 +61,10 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare and exchange | | easy | 10000 | 15.19937975 |
 
 
-## Shell sort
-### Time Effectivity check
-| Function | change      | Realisation | sorting in range | time (sec)|
-|----------|------------:|------------:|----------------:|----------:|
-| compare every n. position | | medium | 10 | 0.012747625 |
-| compare every n. position | | medium | 50 | 0.018819 |
-| compare every n. position | | medium | 100 | 0.048813416 |
-| compare every n. position | | medium | 500 | 0.361823417 |
-| compare every n. position | | medium | 1000 | 0.779618459 |
-| compare every n. position | | medium | 10000 | 12.028018375 |
+## QuickSort - pivot last item
+
+## QuickSort - pivot middle item
+
 
 ## Heap sort
 ### Time Effectivity check
@@ -83,6 +77,7 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare every n. position | | medium | 1000 | 2.680482917 |
 | compare every n. position | | medium | 10000 | 35.958297916 |
 
+
 ## Merge sort
 ### Time Effectivity check
 | Function | change      | Realisation | sorting in range | time (sec)|
@@ -93,6 +88,33 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare every n. position | | medium | 500 | 2.28939825 |
 | compare every n. position | | medium | 1000 | 6.08427125 |
 | compare every n. position | | medium | 10000 | 134.057715833 |
+
+## BucketSort
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| bucketSort | 5 items per bucket | easy | 1-50 / 50 | 0.007616875 |
+| bucketSort | 10 items per bucket | easy | 1-50 / 50 | 0.00654825 |
+| bucketSort | 25 items per bucket| easy | 1-50 / 50 | 0.007177667 |
+| bucketSort | 25 items per bucket| easy | 1-100 / 100 | 0.012844 |
+| bucketSort | 25 items per bucket| easy | 1-500 / 500 | 0.051391875 |
+| bucketSort | 25 items per | easy | 1-1000 / 1000 | 0.100654458 |
+| bucketSort | 25 items per | easy | 1-10000 / 10000 | 1.351543875 |
+
+## RadixSort
+
+## Order Statistics
+
+## Shell sort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| compare every n. position | | medium | 10 | 0.012747625 |
+| compare every n. position | | medium | 50 | 0.018819 |
+| compare every n. position | | medium | 100 | 0.048813416 |
+| compare every n. position | | medium | 500 | 0.361823417 |
+| compare every n. position | | medium | 1000 | 0.779618459 |
+| compare every n. position | | medium | 10000 | 12.028018375 |
+
 
 
 #### Time compared in different sorting algorithms
