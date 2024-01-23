@@ -90,17 +90,27 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare every n. position | | medium | 10000 | 134.057715833 |
 
 ## BucketSort
+### Time Effectivity check
 | Function | change      | Realisation | sorting in range | time (sec)|
 |----------|------------:|------------:|----------------:|----------:|
 | bucketSort | 5 items per bucket | easy | 1-50 / 50 | 0.007616875 |
 | bucketSort | 10 items per bucket | easy | 1-50 / 50 | 0.00654825 |
-| bucketSort | 25 items per bucket| easy | 1-50 / 50 | 0.007177667 |
-| bucketSort | 25 items per bucket| easy | 1-100 / 100 | 0.012844 |
-| bucketSort | 25 items per bucket| easy | 1-500 / 500 | 0.051391875 |
+| bucketSort | 25 items per bucket | easy | 1-50 / 50 | 0.007177667 |
+| bucketSort | 25 items per bucket | easy | 1-100 / 100 | 0.012844 |
+| bucketSort | 25 items per bucket | easy | 1-500 / 500 | 0.051391875 |
 | bucketSort | 25 items per | easy | 1-1000 / 1000 | 0.100654458 |
 | bucketSort | 25 items per | easy | 1-10000 / 10000 | 1.351543875 |
 
 ## RadixSort
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| bucketSort | 256 items per bucket | normal | 50 | 0.585477209 |
+| bucketSort | 256 items per bucket | normal | 100 | 0.600885917 |
+| bucketSort | 256 items per bucket | normal | 500 | 0.751506292 |
+| bucketSort | 256 items per bucket | normal | 1000 | 0.871467375 |
+| bucketSort | 256 items per bucket | normal | 10000 | 3.636127625 |
+
 
 ## Order Statistics
 
