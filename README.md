@@ -111,8 +111,26 @@ This function looks for prime numbers. Where every potential prime number N is c
 | bucketSort | 256 items per bucket | normal | 1000 | 0.871467375 |
 | bucketSort | 256 items per bucket | normal | 10000 | 3.636127625 |
 
-
 ## Order Statistics
+### Time Effectivity check
+| Function | change      | Realisation | sorting in range | time (sec)|
+|----------|------------:|------------:|----------------:|----------:|
+| orderStatistics | 8th item | normal | 50 | 0.009605666 |
+| orderStatistics | 2nd item | normal | 50 | 0.006515083 |
+| orderStatistics | 2nd item | normal | 100 | 0.005582417 |
+| orderStatistics | 63rd item | normal | 100 | 0.018955042 |
+| orderStatistics | 99th item | normal | 100 | 0.020571583 |
+| orderStatistics | 2nd item | normal | 500 | 0.0904005 |
+| orderStatistics | 99th item | normal | 500 | 0.092015167 |
+| orderStatistics | 199th item | normal | 500 | 0.073727042 |
+| orderStatistics | 409th item | normal | 500 | 0.060817917 |
+| orderStatistics | 5th item | normal | 1000 | 0.125805667 |
+| orderStatistics | 55th item | normal | 1000 | 0.105779625 |
+| orderStatistics | 863th item | normal | 1000 | 0.182794167 |
+| orderStatistics | 999th item | normal | 1000 | 0.065689958 |
+| orderStatistics | 5th item | normal | 10000 | 0.853792792 |
+| orderStatistics | 555th item | normal | 10000 | 1.336385458 |
+| orderStatistics | 5555th item | normal | 10000 | 1.596339084 |
 
 ## Shell sort
 ### Time Effectivity check
@@ -124,8 +142,6 @@ This function looks for prime numbers. Where every potential prime number N is c
 | compare every n. position | | medium | 500 | 0.361823417 |
 | compare every n. position | | medium | 1000 | 0.779618459 |
 | compare every n. position | | medium | 10000 | 12.028018375 |
-
-
 
 #### Time compared in different sorting algorithms
 | Function | change      | Realisation | sorting in range | time (sec)|

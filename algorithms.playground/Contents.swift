@@ -132,50 +132,52 @@ func selectionSort () {
 //print(result, array.count)
 //print("done")
 
-func excha(_ a: Int, _ b: Int) -> (Int,Int){return (b, a)}
-
-func orderStatistics(_ array: [Int], _ l: Int, _ r: Int, _ k: Int) -> Int{
-    var A = array
-    var x = A[(l+r)/2]
-    var i = l
-    var j = r
-    repeat {
-        while A[i] < x {
-            i += 1
-        }
-        while x < A[j] {
-            j -= 1
-        }
-        if i > j {
-            break
-        }
-        let a = excha(A[i], A[j])
-        A[i] = a.0
-        A[j] = a.1
-        i += 1
-        j -= 1
-    } while i <= j
-    if k-1 <= j{
-        if l < j {
-            return orderStatistics(A, l, j, k)
-        }
-        return A[j]
-    }
-    if i <= k-1 {
-        if i<r {
-            return orderStatistics(A,i, r, k)
-        }
-        return A[i]
-    }
-    return A[k-1]
+func oStatistics() {
+    func excha(_ a: Int, _ b: Int) -> (Int,Int){return (b, a)}
     
+    func orderStatistics(_ array: [Int], _ l: Int, _ r: Int, _ k: Int) -> Int{
+        var A = array
+        var x = A[(l+r)/2]
+        var i = l
+        var j = r
+        repeat {
+            while A[i] < x {
+                i += 1
+            }
+            while x < A[j] {
+                j -= 1
+            }
+            if i > j {
+                break
+            }
+            let a = excha(A[i], A[j])
+            A[i] = a.0
+            A[j] = a.1
+            i += 1
+            j -= 1
+        } while i <= j
+        if k-1 <= j{
+            if l < j {
+                return orderStatistics(A, l, j, k)
+            }
+            return A[j]
+        }
+        if i <= k-1 {
+            if i<r {
+                return orderStatistics(A,i, r, k)
+            }
+            return A[i]
+        }
+        return A[k-1]
+        
+    }
+    let result = orderStatistics(array,0,array.count-1,5555)
+    print(result)
 }
 
-//let result = orderStatistics(array,0,array.count-1,3)
-
-//let result = clock.measure()
-//print(array,"\n",result,"\n", array.count)
-//print("done")
+let result = clock.measure(oStatistics)
+print(array,"\n",result,"\n", array.count)
+print("done")
 
 /*
 func quickSort() {
@@ -265,7 +267,8 @@ func middleQuickSort(){
 //let result = clock.measure(quickSort)
 //print(array,"\n",result,"\n", array.count)
 //print("done")
-print(array)
+
+
 func heapSort() {
     
     buildHeap(array.count-1)
@@ -448,6 +451,6 @@ func radixSort() {
     }
 }
 
-let result = clock.measure(radixSort)
-print(array,"\n",result,"\n", array.count)
-print("done")
+//let result = clock.measure(radixSort)
+//print(array,"\n",result,"\n", array.count)
+//print("done")
