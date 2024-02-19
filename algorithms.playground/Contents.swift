@@ -402,6 +402,22 @@ func bucketSort() {
     array = B
 }
 
-let result = clock.measure(bucketSort)
+
+//let result = clock.measure(bucketSort)
+//print(array,"\n",result,"\n", array.count)
+//print("done")
+
+func sequentialSearch() {
+    let x = 6138
+    for i in 0...array.count-1 {
+        if array[i] == x {
+            print(i)
+        }
+    }
+    print(-1)
+}
+
+
+let result = clock.measure(sequentialSearch)
 print(array,"\n",result,"\n", array.count)
 print("done")
